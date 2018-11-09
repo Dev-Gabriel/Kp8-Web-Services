@@ -10,7 +10,7 @@ idleSession = 'e_user_idle';
 
 var dailyCTR = function(req, mainCB)
 {
-    console.log('wee')
+    console.log('-------------- Daily CTR Monitoring -----------------')
 }
 
 module.exports = dailyCTR;
