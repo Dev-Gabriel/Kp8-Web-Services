@@ -22,38 +22,12 @@ var dailyCTR = function(req, mainCB)
     var tableName = 
 
     async.waterfall([
-        function(cb){
-            serverdate(cb);
-        },
-        function(serverdate){
-            console.log('serverdate');
-            console.log(serverdate);
-        }
+        
     ],function(error, response)
     {
         mainCB(null, response);
     });
 }
 
-function serverdate(cb)
-{
-    async.waterfall([
-        function (cb){
-            getServerDate(kp7global, cb);
-        },function (getServerDate_response, cb){
-            if(getServerDate_response.code != 1){
-                response = getServerDate_response;
-                cb(true);
-            }
-            else {
-                serverDateTime = getServerDate_response.data.serverDateTime;
-                cb(false);
-            }
-            console.log(serverDateTime)
-        }
-    ],function(serverDateTime){
-        cb(serverDateTime)
-    })
-}
 
 module.exports = dailyCTR;
