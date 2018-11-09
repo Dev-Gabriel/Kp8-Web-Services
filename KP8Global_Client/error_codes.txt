@@ -1,0 +1,11 @@
+KP8Global_Client
+Error Codes
+
+E_UNKNOWN      : unknown error
+E_INV_INI      : .ini not found
+E_CONFIG_PARAM : unknown parameter at config.ini
+E_INV_PARA     : invalid parameter
+E_DB_CONFIG    : database connection authentication
+E_SERVER_CONNECTION
+
+

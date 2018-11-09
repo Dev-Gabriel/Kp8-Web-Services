@@ -1,0 +1,154 @@
+<style>
+    .stp3Column {
+        float: left;
+        width: 33%;
+        padding: 1px;
+    }
+    .SrcBenefBtn{
+        text-align: right;
+    }
+    .stp3Column2row{
+        float: left;
+        width: 50%;
+        padding: 1px;
+    }
+    .stp3Column2row1{
+        float: left;
+        width: 24.5%;
+        padding: 1px;
+    }
+    .stp3Column3row{
+        float: left;
+        width: 29.5%;
+        padding: 1px;
+    }
+    .stp3Column3row1{
+        float: left;
+        width: 9%;
+        padding: 1px;
+    }
+</style>
+<form id="sendout" method="POST" class="kp8Module" style="width: 700px;">
+    <div>
+        Sendout Transaction
+    </div>
+    <div>
+        <!-- <div>Step 1 - Branch Information</div>
+        <div id="step1" style="padding: 10px; border: 1px solid gold;">
+            is this a remote transaction ? <input type="radio" name="isRemote" value="Yes"> Yes <input type="radio" name="isRemote" value="No"> No
+            <div style="position: relative; margin: 10px 0;">
+                <div class="label">
+                    Branch
+                </div>
+                <div class="div-input">
+                    <input type="text" name="branch"/>
+                </div>
+            </div>
+        </div>
+        <div>Step 1 - Branch Information</div>
+        <div id="step1" style="padding: 10px; border: 1px solid gold;">
+            is this a remote transaction ? <input type="radio" name="isRemote" value="Yes"> Yes <input type="radio" name="isRemote" value="No"> No
+            <div style="position: relative; margin: 10px 0;">
+                <div class="label">
+                    Branch
+                </div>
+                <div class="div-input">
+                    <input type="text" name="branch"/>
+                </div>
+            </div>
+        </div> -->
+        <div>Step 3 - Receiver Information</div>
+        <div id="step3" style="padding: 10px; border: 1px solid gold; margin-top: 10px; height: 270px;">
+            <div style="position: relative; margin: 10px 0;" class="SrcBenefBtn">
+                    <button type="submit" class="bg_color confirm" id="searchbtn">Search Beneficiary</button>
+            </div>
+            <div style="position: relative; margin: 10px 0;" class="stp3Column">
+                <div class="label">
+                    Last Name
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+            <div style="position: relative; margin: 10px 0;" class="stp3Column">
+                <div class="label">
+                    First Name
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+            <div style="position: relative; margin: 10px 0;" class="stp3Column">
+                <div class="label">
+                    Middle Name
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+            <div style="position: relative; margin: 10px 0;" class="stp3Column2row">
+                <div class="label">
+                    Home Address
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+            <div style="position: relative; margin: 10px 0;" class="stp3Column2row1">
+                <div class="label">
+                    Country
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+            <div style="position: relative; margin: 10px 0;" class="stp3Column2row1">
+                <div class="label">
+                    Province/State
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+            <div style="position: relative; margin: 10px 0;" class="stp3Column">
+                <div class="label">
+                    Birth Date (yyyy-mm-dd)
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+            <div style="position: relative; margin: 10px 0;" class="stp3Column">
+                <div class="label">
+                    Gender
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+            <div style="position: relative; margin: 10px 0;" class="stp3Column">
+                <div class="label">
+                    Contact No
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+            <!-- <div style="position: relative; margin: 10px 0;" class="stp3Column3row1">
+                <input type="radio" name="isRemote" value="Yes"> SMS
+            </div> -->
+            <div style="position: relative; margin: 10px 0;" class="stp3Column2row">
+                <div class="label">
+                    Relation to Sender
+                </div>
+                <div class="div-input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button type="submit" class="bg_color confirm">Submit</button>
+        <button type="button" id="close">Close</button>
+    </div>
+</form>

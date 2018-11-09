@@ -1,0 +1,51 @@
+
+.kp8Module {
+    border: 2px solid #C32323; 
+    border-radius: 10px; 
+    background: white;
+    overflow: hidden;
+    margin: auto;
+}
+.kp8Module > :first-child  {
+    padding: 10px;
+    background: #C32323; 
+    color: white; 
+}
+.kp8Module > :nth-child(2)  {
+    padding: 25px 15px 15px 15px;
+    color: #666666; 
+}
+.kp8Module > :last-child  {
+    padding : 0 15px 15px 15px;
+    text-align: right;
+}
+div.label {
+    position: absolute;
+    padding: 0 10px;
+    transition-duration: 0.3s;
+    cursor: text;
+    top: 10px;
+}
+div.label.active {
+    color: #C32323;
+    font-size: 0.8em;
+    cursor: default;
+    top: -13px;
+}
+
+.div-input {
+    transition-duration: 0.3s;
+    border-bottom: 2px solid gainsboro;
+    width: 100%;
+}
+.div-input > input{
+    padding: 10px 10px 5px 10px; 
+    box-sizing: border-box; 
+    text-decoration: none; 
+    outline: none; 
+    border: none;
+    width:100%; 
+}
+.div-input.active {
+    border-color: #C32323;
+}

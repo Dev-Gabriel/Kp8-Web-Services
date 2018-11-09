@@ -1,0 +1,61 @@
+<form class="kp8Module" method="POST" action="/login" style="width: 350px;">
+    <div class="bg_color" style="padding: 10px; color: white">
+        Mlhuillier - Global Client
+    </div>
+    <div>
+        <center>
+            <img src="images/_mlDiamond.svg" class="bg_color" style="margin: auto; border-radius: 100%; height: 100px;" draggable="false"/>
+            <h2 style="padding: 0; margin: 0;">Welcome back<br /><%- req.session.user.fullName %></h2>
+            Please login back here for you to continue
+        </center>
+        <br />
+        <div style="position: relative; margin: 10px 0;">
+            <div class="label">
+                Username
+            </div>
+            <div class="div-input">
+                <input class="userOnly" name="userName" style="text-transform:uppercase;"/>
+            </div>
+        </div>
+        <div style="position: relative; margin-top: 30px;">
+            <div class="label">
+                Password
+            </div>
+            <div class="div-input">
+                <input name="passWord" type="password" />
+            </div>
+        </div>
+        <div style="padding-top: 15px; text-align: right;">
+            <button type="submit" class="bg_color confirm">Login</button>
+        </div>
+    </div>
+</form>
+
+<script>
+$(function () {
+    var response = { code : '<%- code %>', message : '<%- message %>', errorCode : '<%- errorCode %>' }
+    userOnly();
+    if (response.code == 0)
+        ui_msg(true, response.message, true, "Log me back in", null, null);
+    else
+        ui_msg(true, response.message, true, "Continue", null, '/');
+
+    var relogin_idle_timer;
+    console.log('Idle time allowed is : ' + idle_time + ' minute/s')
+    $(document).on('mouseover click keyup', function () {
+        clearTimeout(relogin_idle_timer);
+        idle_timeStart(idle_time); /*number is minutes*/
+    });
+
+    function relogin_idle_timesUp() {
+        window.location.href = '/logout?u=idle';
+    }
+
+    function idle_timeStart(minute) {
+        console.log('You will be logged out if failed to relogin after ' + idle_time + ' minute/s');
+        relogin_idle_timer =  setTimeout(relogin_idle_timesUp, minute * 60/*seconds*/ * 1000/*miliseconds*/);
+    }
+    default_bindings();
+    idle_timeStart(idle_time);
+})
+</script>

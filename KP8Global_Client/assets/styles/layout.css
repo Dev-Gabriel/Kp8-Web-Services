@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0 0 40px 0;
+    background-color: gainsboro;
+    user-select: none;
+    font-family: sans-serif, Verdana, Geneva, Tahoma;
+    font-size: 0.9em;
+}
+button, input {
+    font: inherit;
+    outline: none;
+}
+button {
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    color: #C32323;
+    border: 1px solid gainsboro;
+    margin: 0 0 0 10px;
+}
+button:hover {
+    text-decoration: underline;
+    border: 1px solid #C32323;
+}
+button.confirm {
+    font-weight: bolder;
+    border: 1px solid #C32323;
+    cursor: pointer;
+}
+button.confirm:hover {
+    color:white;
+}
+button.confirm:active {
+    background-color: #DF0000;
+    text-decoration: none;
+}
+button:disabled{
+    background-color: #938383;
+    border: 1px solid #736363;
+    cursor: not-allowed;
+}
+footer {
+    position: fixed;
+    transition-duration: 0.3s;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+.footer-show {
+    bottom: 0px;
+}
+.footer-hide {
+    bottom: -40px;
+}
+
+a {
+    transition-duration: 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.bg_color {
+    background: #C32323;
+    color: gainsboro;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.intro {
+    transition-duration: 0.8s;
+    transition-delay: 0.5s;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    text-align: center;
+}
+.mlbgHide {
+    top: 250px;
+    opacity: 0;
+}
+.mlbgShow {
+    top: 200px;
+    opacity: 1;
+}

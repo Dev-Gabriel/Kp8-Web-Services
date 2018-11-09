@@ -1,0 +1,13 @@
+http://localhost:1369/searchKYC/?password=boyursa805&username=boswebserviceusr&firstname=test&lastname=test
+
+SELECT * FROM `kpusersglobal`.`sysuseraccounts` WHERE userlogin LIKE '%masc%';
+SELECT * FROM `kpusersglobal`.`mlbranchesstations` WHERE branchcode = '110' AND stationcode = '278684371';
+
+-- get other charge domestic --
+SELECT paymenttype, valueforcomputationTOTAL, valueforcomputationPRINCIPAL, operationappliedTOTAL, operationappliedPRINCIPAL FROM kpformsglobal.otherchargepaymentG;
+
+-- get standard rates international --
+SELECT nextID,currID,nDateEffectivity,cDateEffectivity,cEffective,nextID, NOW() AS currentDate FROM kpformsglobal.headercharges WHERE cEffective = 1;
+SELECT ChargeValue AS charge FROM kpformsglobal.charges WHERE ROUND(1,2) BETWEEN MinAmount AND MaxAmount AND `type` = '50';
+
+SELECT * FROM `kpformsglobal`.`headercharges` WHERE nextID > 0; -- and ceffective = 1;

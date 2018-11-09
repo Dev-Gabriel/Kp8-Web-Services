@@ -1,0 +1,113 @@
+<ul>
+    <li>
+        <a>Sendout</a>
+        <div tabindex="0">
+            <ul>
+                <li>
+                    <a data-link="prePaymentDisclosure">Pre-Payment Disclosure</a>
+                </li>
+                <li>
+                    <a data-link="sendout">Sendout Transaction</a>
+                </li>
+                <li>
+                    <a>Sendout Cancellation</a>
+                </li>
+                <li>
+                    <a>Direct To Bank</a>
+                </li>
+                <li>
+                    <a>Direct To Bank Cancellation</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a>Payout</a>
+        <div tabindex="0">
+            <ul>
+                <li>
+                    <a>Payout Transaction</a>
+                </li>
+                <li>
+                    <a>Payout Cancellation</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a>Billspayment</a>
+        <div tabindex="0">
+            <ul>
+                <li>
+                    <a>Sendout</a>
+                </li>
+                <li>
+                    <a>Sendout Cancellation</a>
+                </li>
+                <li>
+                    <a>Reprint</a>
+                </li>
+                <li>
+                    <a>Bills Payment Web Report</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a>Wallet</a>
+        <div tabindex="0">
+            <ul>
+                <li>
+                    <a>ML Wallet Load</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a>Reports</a>
+        <div tabindex="0">
+            <ul>
+                <li>
+                    <a>Reprinting</a>
+                </li>
+                <li>
+                    <a>Branch Web Report</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a>System</a>
+        <div tabindex="0">
+            <ul>
+                <li>
+                    <a>Network</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a title="user info">
+            <img src="images/user_normal.svg" style="height: 16px; border-radius: 100%; border: 1px solid gainsboro; float: left; margin: 0 2px 0 2px; padding: 2px 2px 0 2px;" draggable="false">
+            User Info
+        </a>
+        <div tabindex="0">
+            <ul>
+                <li>
+                    <div style="padding: 0 15px;">
+                        <p>User: <%- req.session.user.fullName %></p>
+                        <p>Branch Name: <%- req.session.user.bName %></p>
+                        <p>Branch Code: <%- req.session.user.bCode %></p>
+                        <p>Zone Code: <%- req.session.user.zCode %></p>
+                    </div>
+                </li>
+                <li>
+                    <a data-link="changePassword">Change Password</a>
+                </li>
+                <li>
+                    <a id="logout" data-link="logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>

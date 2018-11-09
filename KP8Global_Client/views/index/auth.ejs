@@ -1,0 +1,23 @@
+<!--
+<%- code %> <br />
+<%- message %> <br />
+<%- errorCode %> <br />
+-->
+<script>
+    $(function (){
+        var response = { code : '<%- code %>', message : '<%- message %>', errorCode : '<%- errorCode %>' }
+
+        if (response.code == 1 ) {
+            ui_msg(true, "Authenticated, Please wait while we redirect you to the main page", false, null);
+            setTimeout(function () {
+                window.location.href = '/';
+            }, 5000);
+        }
+        else if (response.code == 0 ) {
+            ui_msg(true, response.message, false, 'ok', response.errorCode);
+        }
+        else if (response.code == -1 ) {
+            ui_msg(true, response.message, false, 'ok', response.errorCode);
+        }
+    })
+</script>

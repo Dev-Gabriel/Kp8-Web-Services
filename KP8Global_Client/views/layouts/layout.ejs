@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Global Client</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/_mlLoad.css">
+    <link rel="stylesheet" href="/styles/ajxldr.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/menu.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/prePayment.css">
+    <!--STYLES END-->
+    <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
+    <script src="/js/_jquery-3.3.1.min.js"></script>
+    <script src="/js/ajxldr.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/kheProject.js"></script>
+    <script src="/js/sendout.js"></script>
+    <!--SCRIPTS END-->
+  </head>
+
+  <body>
+    <header id="header" class="bg_color header_hide"></header>
+    <footer class="bg_color footer-hide"> 
+      <div style="float: left">Version No. 8.00</div>
+      Copyright © M. Lhuillier Financial Services, Inc. All Rights Reserved.
+     </footer>
+    
+    <div style="margin-top: 60px; min-height: 300px;">
+      <%- body %>
+    </div>
+    <%- partial('../_shared/_ajxldr.ejs')%>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<div id="prePaymentDisclosure-container" class="kp8Module">
+    <div class="bg_color" style="padding: 10px; color: white">
+        Pre-Payment Disclosure
+    </div>
+    <div>
+        <center>
+            <h4 style="padding: 0; margin: 0;">MLhuillier Financial Services, Inc.</h4>            
+        </center>
+        <div style="padding: 10px 0;">Transaction Info/Impormasyon ng Transaksyon</div>
+        <div class="ppd-row-content">
+            <div> Transfer Amount/Halaga ng Padala </div>
+            <div> <b>USD</b> </div>
+            <div> <input class="currencyOnly" id="transferAmount"/> </div>
+        </div>
+
+        <div class="ppd-row-content">
+            <div> Charges/Mga Kabayaran </div>
+            <div> <b style="color: white;">USD</b> </div>
+            <div> <input disabled type="text" id="charges"/> </div>
+        </div>
+
+        <div class="ppd-row-content">
+            <div> Transfer Taxes/Buwis sa Pagpadala </div>
+            <div> <b style="color: white;">USD</b> </div>
+            <div> <input disabled type="text" id="transferTaxes"/> </div>
+        </div>
+
+        <div style="padding: 5px 0;">
+            <div style="border: 1px solid gainsboro; float: right; width: 45%;"></div>
+        </div>
+
+        <div class="ppd-row-content">
+            <div> Total Amount/Kabuang Halaga </div>
+            <div> <b>USD</b> </div>
+            <div> <input disabled type="text" id="totalAmount"/> </div>
+        </div>
+
+        <div style="padding: 7px 0;">
+            Country/Bansa 
+            <input disabled value="Philippines" style="width:80px; padding: 0 5px; display: inline-block;"/>
+        </div>
+        
+        <div class="ppd-row-content">
+            <div> Exchange Rate/Halaga ng Palitan  </div>
+            <div> <b>PHP</b> </div>
+            <div> 1USD = <input disabled id="exchangeRate"/> </div>
+        </div>
+
+        <div class="ppd-row-content">
+            <div> Benef. to receive/Halaga ng Matatanggap  </div>
+            <div> <b>PHP</b> </div>
+            <div> <input disabled id="benef"/> </div>
+        </div>
+
+        <div style="padding-top: 15px; text-align: right;">
+            <button class="bg_color confirm" onclick="btnPrintPDF()" disabled>Print</button>
+            <button id="close">Close</button>
+        </div>
+    </div>
+</div>
+<br />
+<div id="ppd_printable" style="display: none;">
+    <div>
+        <img src="images/mlhuillier-logo.png" style="height: 60px;"/>
+        <br /> M.lhuillier Financial Services, Inc. <br />
+        <div id="address"></div>
+    </div>
+    <div id="date" style="padding-top: 10px;"></div>
+    <div>NOT A RECIEPT</div>
+    <div>
+        <div style="margin-bottom: 10px; font-weight: 700;">Transaction Info / Impormasyon ng transaksyon</div>
+        <div class="ppd_prntRows">
+            <div>Transfer Amount / Halaga ng Padala</div>
+            <div>
+                <b id="prnt_transferAmount">0.00</b>
+                <b>USD</b>
+            </div>
+        </div>
+        <div class="ppd_prntRows">
+            <div>Charges / Mga Kabayaran</div>
+            <div>
+                <b id="prnt_charges">0.00</b>
+                <b style="opacity: 0;">USD</b>
+            </div>
+        </div>
+        <div class="ppd_prntRows">
+            <div>Transfer Taxes / Buwis sa Pagpadala</div>
+            <div>
+                <b id="prnt_transferTaxes">0.00</b>
+                <b style="opacity: 0;">USD</b>
+            </div>
+        </div>
+        <div style="border-bottom: 1px solid black; width: 80px; float: right; margin-right: 25px;"></div>
+        <div class="ppd_prntRows">
+            <div>Total Amount / Kabuuang Halaga</div>
+            <div>
+                <b id="prnt_totalAmount" style="font-size: 1.1em">0.00</b>
+                <b>USD</b>
+            </div>
+        </div>
+        Country / Bansa <b style="margin-left: 10px;">PHILIPPINES</b>
+        <div class="ppd_prntRows">
+            <div>Exchange Rate / Halaga ng Palitan</div>
+            <div style="float: left; margin-left: 60px;"> US $1 =</div>
+            <div>
+                <b id="prnt_exchangeRate">0.00</b>
+                <b>PHP</b>
+            </div>
+        </div>
+        <div class="ppd_prntRows">
+            <div>Benef. to receive / Halaga ng Matatanggap</div>
+            <div>
+                <b id="prnt_benef" style="font-size: 1.1em">0.00</b>
+                <b>PHP</b>
+            </div>
+        </div>
+    </div>
+    <div class="ppd_prntRows" style="padding-top: 30px;">
+        <div style="border-top: 1px solid black; float: right; padding: 5px 30px; margin-right: 15px;">
+            Customer's Signature
+        </div>
+    </div>
+</div>

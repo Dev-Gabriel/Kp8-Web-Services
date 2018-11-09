@@ -1,0 +1,17 @@
+<style>
+    #menu-module-container {
+        transition-duration: 0.5s;
+        margin-top: 20px;
+        opacity: 0;
+    }
+    #menu-module-container.show {
+        margin-top: 10px !important;
+        opacity: 1 !important;
+    }
+</style>
+<div class="intro mlbgHide">
+    <img src="images/mlhuillier-logo.png" width= "80%" draggable="false">
+</div>
+<script> $(function () { start( '<%- req.session.user.fullName %>' ); }); </script>
+
+<div id="menu-module-container"> </div>
